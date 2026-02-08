@@ -1,0 +1,30 @@
+{
+  "common": {
+    "buy": "Beli Sekarang",
+    "choose": "Pilih Paket",
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "back": "Kembali",
+    "next": "Lanjut",
+    "confirm": "Konfirmasi"
+  },
+  "nav": {
+    "home": "Beranda",
+    "packages": "Paket Internet",
+    "coverage": "Cek Cakupan",
+    "help": "Bantuan",
+    "login": "Masuk"
+  },
+  "home": {
+    "hero_title": "Internet Cepat & Hemat",
+    "hero_subtitle": "Nikmati koneksi tanpa batas mulai dari Rp49.000/bulan.",
+    "cta": "Beli Paket Sekarang"
+  },
+  "checkout": {
+    "title": "Pendaftaran Layanan",
+    "step1": "Pilih Paket",
+    "step2": "Data Diri",
+    "step3": "Pembayaran",
+    "success": "Pembayaran Berhasil!"
+  }
+}

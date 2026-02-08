@@ -1,0 +1,30 @@
+{
+  "common": {
+    "buy": "Buy Now",
+    "choose": "Choose Plan",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "back": "Back",
+    "next": "Next",
+    "confirm": "Confirm"
+  },
+  "nav": {
+    "home": "Home",
+    "packages": "Internet Plans",
+    "coverage": "Check Coverage",
+    "help": "Help",
+    "login": "Login"
+  },
+  "home": {
+    "hero_title": "Fast & Affordable Internet",
+    "hero_subtitle": "Enjoy unlimited connection starting from IDR 49,000/month.",
+    "cta": "Buy Plan Now"
+  },
+  "checkout": {
+    "title": "Service Registration",
+    "step1": "Select Plan",
+    "step2": "Personal Data",
+    "step3": "Payment",
+    "success": "Payment Successful!"
+  }
+}
