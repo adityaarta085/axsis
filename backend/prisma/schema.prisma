@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id @default(uuid())
+  phone      String   @unique
+  name       String?
+  email      String?
+  orders     Order[]
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model Package {
+  id          String   @id @default(uuid())
+  slug        String   @unique
+  name        String
+  price       Int
+  speed_mbps  Int
+  quota       String
+  description String?
+  category    String
+  tag         String?
+  features    String[]
+  orders      Order[]
+  created_at  DateTime @default(now())
+}
+
+model Order {
+  id             String   @id @default(uuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id])
+  packageId      String
+  package        Package  @relation(fields: [packageId], references: [id])
+  amount         Int
+  currency       String   @default("IDR")
+  status         String   @default("pending")
+  paymentMethod  String?
+  paymentRef     String?
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
+}
+
+model Coverage {
+  id                   String   @id @default(uuid())
+  postcode             String   @unique
+  city                 String
+  supported            Boolean  @default(true)
+  expected_speed_mbps  Int
+  notes                String?
+}
+
+model FAQ {
+  id        String   @id @default(uuid())
+  category  String
+  question  String
+  answer    String
+  created_at DateTime @default(now())
+}
+
+model BlogPost {
+  id         String   @id @default(uuid())
+  slug       String   @unique
+  title      String
+  content    String
+  image      String?
+  author     String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model OtpRequest {
+  id         String   @id @default(uuid())
+  phone      String
+  code       String
+  expires_at DateTime
+  verified   Boolean  @default(false)
+  created_at DateTime @default(now())
+}
