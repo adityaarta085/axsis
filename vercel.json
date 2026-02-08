@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "buildCommand": "npx turbo run build --filter=axis-frontend",
+  "outputDirectory": "frontend/.next",
+  "installCommand": "npm install"
+}
