@@ -1,6 +1,14 @@
 import { Request, Response, NextFunction } from 'express';
 import * as packageService from '../services/packageService';
+import * as scrapingService from '../services/scrapingService';
 import { successResponse } from '../middlewares/errorHandler';
+
+export const triggerScrape = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const count = await scrapingService.scrapeAndSaveAllPackages();
+    successResponse(res, { message: `Scraped and saved ${count} packages from Axis website`, count });
+  } catch (error) { next(error); }
+};
 
 export const getPackages = async (req: Request, res: Response, next: NextFunction) => {
   try {
