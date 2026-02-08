@@ -13,3 +13,12 @@ export const updateProfileSchema = z.object({
   name: z.string().min(2).optional(),
   email: z.string().email().optional(),
 });
+
+export const createOrderSchema = z.object({
+  packageId: z.string(),
+  paymentMethod: z.string(),
+  customer: z.object({
+    name: z.string().min(2),
+    phone: z.string().min(10),
+  }).optional(),
+});
