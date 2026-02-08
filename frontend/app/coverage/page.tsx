@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import api from '@/lib/api';
-import { MapPin, CheckCircle2, XCircle } from 'lucide-react';
+import { MapPin, CheckCircle2, XCircle, Zap } from 'lucide-react';
 
 export default function CoveragePage() {
   const [postcode, setPostcode] = useState('');
