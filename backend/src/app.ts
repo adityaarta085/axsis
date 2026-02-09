@@ -9,6 +9,7 @@ import packageRoutes from './routes/packageRoutes';
 import coverageRoutes from './routes/coverageRoutes';
 import blogRoutes from './routes/blogRoutes';
 import checkoutRoutes from './routes/checkoutRoutes';
+import scrapeRoutes from './routes/scrapeRoutes';
 import * as faqService from './services/faqService';
 
 const app = express();
@@ -36,6 +37,7 @@ app.use('/api/packages', packageRoutes);
 app.use('/api/coverage', coverageRoutes);
 app.use('/api/blog', blogRoutes);
 app.use('/api/checkout', checkoutRoutes);
+app.use('/api/scrape', scrapeRoutes);
 
 app.use(errorHandler);
 

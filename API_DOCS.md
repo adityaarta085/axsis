@@ -22,3 +22,6 @@
 - `GET /api/faqs`: Help content.
 - `GET /api/blog`: News list.
 - `GET /api/coverage`: Area check.
+
+### Scraping
+- `GET /api/scrape/axis`: Scrape realtime data dari halaman axis.co.id (opsional query `url=https://www.axis.co.id/...`).
